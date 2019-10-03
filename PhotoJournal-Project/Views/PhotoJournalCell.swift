@@ -10,4 +10,9 @@ import UIKit
 
 class PhotoJournalCell: UICollectionViewCell {
     
+    // MARK: Outlets
+    @IBOutlet weak var imgOutlet: UIImageView!
+    
+    @IBOutlet weak var textViewOutlet: UITextView!
+    
 }
