@@ -45,10 +45,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <state key="normal" title=". . ."/>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wWQ-w8-i7L">
-                                                    <rect key="frame" x="20" y="261" width="347" height="67"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wWQ-w8-i7L">
+                                                    <rect key="frame" x="0.0" y="303" width="387" height="45"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="VzQ-I7-1H2"/>
+                                                    </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,9 +58,12 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wWQ-w8-i7L" secondAttribute="trailing" id="2al-tg-A0D"/>
                                                 <constraint firstItem="krQ-74-icP" firstAttribute="leading" secondItem="PeE-RG-qTd" secondAttribute="leading" id="Gcp-9d-DeZ"/>
                                                 <constraint firstItem="krQ-74-icP" firstAttribute="top" secondItem="PeE-RG-qTd" secondAttribute="top" id="LLC-Z0-rhX"/>
                                                 <constraint firstAttribute="trailing" secondItem="krQ-74-icP" secondAttribute="trailing" id="iBH-g2-KAo"/>
+                                                <constraint firstAttribute="bottom" secondItem="wWQ-w8-i7L" secondAttribute="bottom" id="lnB-BX-FD4"/>
+                                                <constraint firstItem="wWQ-w8-i7L" firstAttribute="leading" secondItem="PeE-RG-qTd" secondAttribute="leading" id="qSp-nX-dbe"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="387" height="348"/>
