@@ -33,12 +33,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="387" height="348"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krQ-74-icP">
-                                                    <rect key="frame" x="74" y="36" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krQ-74-icP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="387" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="heM-EK-gaD"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-YX-1s3">
+                                                    <rect key="frame" x="288" y="218" width="91" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title=". . ."/>
+                                                </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wWQ-w8-i7L">
-                                                    <rect key="frame" x="15" y="242" width="347" height="67"/>
+                                                    <rect key="frame" x="20" y="261" width="347" height="67"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -46,13 +54,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-YX-1s3">
-                                                    <rect key="frame" x="280" y="183" width="91" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <state key="normal" title=". . ."/>
-                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="krQ-74-icP" firstAttribute="leading" secondItem="PeE-RG-qTd" secondAttribute="leading" id="Gcp-9d-DeZ"/>
+                                                <constraint firstItem="krQ-74-icP" firstAttribute="top" secondItem="PeE-RG-qTd" secondAttribute="top" id="LLC-Z0-rhX"/>
+                                                <constraint firstAttribute="trailing" secondItem="krQ-74-icP" secondAttribute="trailing" id="iBH-g2-KAo"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="387" height="348"/>
                                     </collectionViewCell>
