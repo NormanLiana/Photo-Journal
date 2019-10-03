@@ -124,6 +124,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" id="E8c-SJ-2Zw"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lvy-Xi-KjG"/>
+                                    <barButtonItem title="Item" id="mVA-P1-spx"/>
                                 </items>
                             </toolbar>
                         </subviews>
