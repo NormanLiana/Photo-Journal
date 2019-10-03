@@ -37,6 +37,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5z-9W-MKj">
+                                <rect key="frame" x="0.0" y="792" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mxi-s1-n6J"/>
+                                    <barButtonItem systemItem="add" id="eB7-D3-LAH"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6PA-Xo-Y2s"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="daf-hu-YuR"/>
