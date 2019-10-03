@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Q6N-y6-Knt">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="journalCell" id="Q6N-y6-Knt">
                                         <rect key="frame" x="13.5" y="0.0" width="387" height="348"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PeE-RG-qTd">
@@ -39,9 +39,11 @@
                                                         <constraint firstAttribute="height" constant="200" id="heM-EK-gaD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-YX-1s3">
-                                                    <rect key="frame" x="288" y="218" width="91" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rh-YX-1s3">
+                                                    <rect key="frame" x="312" y="200" width="75" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="Ws2-oa-qOh"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <state key="normal" title=". . ."/>
                                                 </button>
@@ -59,7 +61,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="wWQ-w8-i7L" secondAttribute="trailing" id="2al-tg-A0D"/>
+                                                <constraint firstAttribute="trailing" secondItem="3rh-YX-1s3" secondAttribute="trailing" id="4QE-jl-wZr"/>
                                                 <constraint firstItem="krQ-74-icP" firstAttribute="leading" secondItem="PeE-RG-qTd" secondAttribute="leading" id="Gcp-9d-DeZ"/>
+                                                <constraint firstItem="3rh-YX-1s3" firstAttribute="top" secondItem="krQ-74-icP" secondAttribute="bottom" id="KcA-ea-Bff"/>
                                                 <constraint firstItem="krQ-74-icP" firstAttribute="top" secondItem="PeE-RG-qTd" secondAttribute="top" id="LLC-Z0-rhX"/>
                                                 <constraint firstAttribute="trailing" secondItem="krQ-74-icP" secondAttribute="trailing" id="iBH-g2-KAo"/>
                                                 <constraint firstAttribute="bottom" secondItem="wWQ-w8-i7L" secondAttribute="bottom" id="lnB-BX-FD4"/>

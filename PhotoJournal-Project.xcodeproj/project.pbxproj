@@ -14,6 +14,8 @@
 		A5156EB92346830E00F6F3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5156EB72346830E00F6F3D4 /* LaunchScreen.storyboard */; };
 		A5156EC42346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156EC32346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift */; };
 		A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */; };
+		A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */; };
+		A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		A5156EC32346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournal_ProjectTests.swift; sourceTree = "<group>"; };
 		A5156EC52346830E00F6F3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalVC.swift; sourceTree = "<group>"; };
+		A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournal.swift; sourceTree = "<group>"; };
+		A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				A5156ED0234686B500F6F3D4 /* Controllers */,
 				A5156EB22346830D00F6F3D4 /* Main.storyboard */,
+				A5156ED72346924200F6F3D4 /* Views */,
+				A5156ED4234690F600F6F3D4 /* Models */,
 				A5156ED1234686C800F6F3D4 /* Supporting Files */,
 				A5156EBA2346830E00F6F3D4 /* Info.plist */,
 			);
@@ -113,6 +119,22 @@
 				A5156EAE2346830D00F6F3D4 /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5156ED4234690F600F6F3D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5156ED72346924200F6F3D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */,
+				A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */,
 				A5156EAD2346830D00F6F3D4 /* AppDelegate.swift in Sources */,
+				A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */,
 				A5156EAF2346830D00F6F3D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
