@@ -11,6 +11,7 @@ import UIKit
 class PhotoJournalVC: UIViewController {
 
     // MARK: Outlets
+    @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     // MARK: Properties
     
