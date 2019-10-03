@@ -43,6 +43,5 @@ extension PhotoJournalVC: UICollectionViewDataSource {
         }
         return UICollectionViewCell()
     }
-    
-    
 }
+
