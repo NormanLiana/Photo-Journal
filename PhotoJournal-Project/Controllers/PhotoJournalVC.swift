@@ -14,6 +14,7 @@ class PhotoJournalVC: UIViewController {
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
     // MARK: Properties
+    var photoAlbums = [PhotoJournal]()
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
@@ -26,4 +27,8 @@ class PhotoJournalVC: UIViewController {
 }
 
 // MARK: Extensions
-
+extension PhotoJournalVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        <#code#>
+//    }
+}
