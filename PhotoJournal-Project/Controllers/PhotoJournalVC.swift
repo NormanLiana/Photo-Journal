@@ -27,8 +27,22 @@ class PhotoJournalVC: UIViewController {
 }
 
 // MARK: Extensions
-extension PhotoJournalVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        <#code#>
-//    }
+extension PhotoJournalVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photoAlbums.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionViewOutlet.dequeueReusableCell(withReuseIdentifier: "journalCell", for: indexPath) as? PhotoJournalCell {
+            let album = photoAlbums[indexPath.row]
+            cell.textViewOutlet.text = album.title
+            
+            // TODO: set image for cell
+            
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    
 }
