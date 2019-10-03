@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-Ed-1bR">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-Ed-1bR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8r2-tF-bK1">
                                     <size key="itemSize" width="50" height="50"/>
@@ -37,9 +36,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5z-9W-MKj">
-                                <rect key="frame" x="0.0" y="792" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5z-9W-MKj">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mxi-s1-n6J"/>
                                     <barButtonItem systemItem="add" id="eB7-D3-LAH"/>
@@ -48,6 +46,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G1m-Ed-1bR" firstAttribute="top" secondItem="daf-hu-YuR" secondAttribute="top" id="3GT-FG-TJy"/>
+                            <constraint firstItem="C5z-9W-MKj" firstAttribute="trailing" secondItem="daf-hu-YuR" secondAttribute="trailing" id="A6m-Va-6xd"/>
+                            <constraint firstItem="C5z-9W-MKj" firstAttribute="leading" secondItem="daf-hu-YuR" secondAttribute="leading" id="CRK-D1-viH"/>
+                            <constraint firstItem="C5z-9W-MKj" firstAttribute="top" secondItem="G1m-Ed-1bR" secondAttribute="bottom" id="F54-ef-9BY"/>
+                            <constraint firstItem="G1m-Ed-1bR" firstAttribute="leading" secondItem="daf-hu-YuR" secondAttribute="leading" id="HQK-Xh-6Hd"/>
+                            <constraint firstItem="daf-hu-YuR" firstAttribute="trailing" secondItem="G1m-Ed-1bR" secondAttribute="trailing" id="Jo6-hv-qCd"/>
+                            <constraint firstItem="daf-hu-YuR" firstAttribute="bottom" secondItem="C5z-9W-MKj" secondAttribute="bottom" id="eBI-Sp-zBa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="daf-hu-YuR"/>
                     </view>
                 </viewController>
