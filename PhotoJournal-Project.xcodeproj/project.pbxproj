@@ -13,6 +13,7 @@
 		A5156EB62346830E00F6F3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5156EB52346830E00F6F3D4 /* Assets.xcassets */; };
 		A5156EB92346830E00F6F3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5156EB72346830E00F6F3D4 /* LaunchScreen.storyboard */; };
 		A5156EC42346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156EC32346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift */; };
+		A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A5156EBF2346830E00F6F3D4 /* PhotoJournal-ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PhotoJournal-ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5156EC32346830E00F6F3D4 /* PhotoJournal_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournal_ProjectTests.swift; sourceTree = "<group>"; };
 		A5156EC52346830E00F6F3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A5156EAB2346830D00F6F3D4 /* PhotoJournal-Project */ = {
 			isa = PBXGroup;
 			children = (
+				A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */,
 				A5156EAC2346830D00F6F3D4 /* AppDelegate.swift */,
 				A5156EAE2346830D00F6F3D4 /* SceneDelegate.swift */,
 				A5156EB22346830D00F6F3D4 /* Main.storyboard */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */,
 				A5156EAD2346830D00F6F3D4 /* AppDelegate.swift in Sources */,
 				A5156EAF2346830D00F6F3D4 /* SceneDelegate.swift in Sources */,
 			);
