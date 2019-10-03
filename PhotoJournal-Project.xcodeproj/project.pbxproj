@@ -79,12 +79,9 @@
 		A5156EAB2346830D00F6F3D4 /* PhotoJournal-Project */ = {
 			isa = PBXGroup;
 			children = (
-				A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */,
-				A5156EAC2346830D00F6F3D4 /* AppDelegate.swift */,
-				A5156EAE2346830D00F6F3D4 /* SceneDelegate.swift */,
+				A5156ED0234686B500F6F3D4 /* Controllers */,
 				A5156EB22346830D00F6F3D4 /* Main.storyboard */,
-				A5156EB52346830E00F6F3D4 /* Assets.xcassets */,
-				A5156EB72346830E00F6F3D4 /* LaunchScreen.storyboard */,
+				A5156ED1234686C800F6F3D4 /* Supporting Files */,
 				A5156EBA2346830E00F6F3D4 /* Info.plist */,
 			);
 			path = "PhotoJournal-Project";
@@ -97,6 +94,25 @@
 				A5156EC52346830E00F6F3D4 /* Info.plist */,
 			);
 			path = "PhotoJournal-ProjectTests";
+			sourceTree = "<group>";
+		};
+		A5156ED0234686B500F6F3D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5156ED1234686C800F6F3D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5156EB72346830E00F6F3D4 /* LaunchScreen.storyboard */,
+				A5156EAC2346830D00F6F3D4 /* AppDelegate.swift */,
+				A5156EB52346830E00F6F3D4 /* Assets.xcassets */,
+				A5156EAE2346830D00F6F3D4 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
