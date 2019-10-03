@@ -123,9 +123,9 @@
                                 <rect key="frame" x="0.0" y="780" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="E8c-SJ-2Zw"/>
+                                    <barButtonItem title="Photo Library" id="E8c-SJ-2Zw"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lvy-Xi-KjG"/>
-                                    <barButtonItem title="Item" id="mVA-P1-spx"/>
+                                    <barButtonItem systemItem="camera" id="mVA-P1-spx"/>
                                 </items>
                             </toolbar>
                         </subviews>
