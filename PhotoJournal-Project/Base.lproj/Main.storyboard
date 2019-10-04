@@ -129,7 +129,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfv-NP-g7h">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Photo Library" id="E8c-SJ-2Zw"/>
+                                    <barButtonItem title="Photo Library" id="E8c-SJ-2Zw">
+                                        <connections>
+                                            <action selector="photoLibraryButtonPressed:" destination="DMB-Kw-SWb" id="ROh-Ik-wo2"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lvy-Xi-KjG"/>
                                     <barButtonItem systemItem="camera" id="mVA-P1-spx"/>
                                 </items>
@@ -172,6 +176,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Vc-vJ-hg7"/>
                     </view>
+                    <connections>
+                        <outlet property="imgOutlet" destination="eiQ-fy-Udm" id="etH-HH-gbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXS-4F-aZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
