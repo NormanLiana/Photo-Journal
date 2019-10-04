@@ -13,6 +13,10 @@ class PhotoJournalVC: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
+    
+    
+    
+    
     // MARK: Properties
     var photoAlbums = [PhotoJournal]()
     
@@ -20,6 +24,13 @@ class PhotoJournalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: Actions
+    @IBAction func addEntryButtonPressed(_ sender: UIBarButtonItem) {
+        let entryVC = storyboard?.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
+        present(entryVC, animated: true, completion: nil)
+    }
+    
     
     // MARK: Private Methods
     

@@ -16,6 +16,7 @@
 		A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */; };
 		A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */; };
 		A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */; };
+		A53FF4D52347BA9000A4A717 /* PhotoEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FF4D42347BA9000A4A717 /* PhotoEntryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalVC.swift; sourceTree = "<group>"; };
 		A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournal.swift; sourceTree = "<group>"; };
 		A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalCell.swift; sourceTree = "<group>"; };
+		A53FF4D42347BA9000A4A717 /* PhotoEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */,
+				A53FF4D42347BA9000A4A717 /* PhotoEntryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */,
 				A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */,
+				A53FF4D52347BA9000A4A717 /* PhotoEntryVC.swift in Sources */,
 				A5156EAD2346830D00F6F3D4 /* AppDelegate.swift in Sources */,
 				A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */,
 				A5156EAF2346830D00F6F3D4 /* SceneDelegate.swift in Sources */,
