@@ -36,7 +36,10 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JOJ-Oz-GNQ">
                                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Settings"/>
+                                                <connections>
+                                                    <action selector="settingsButtonPressed:" destination="Xwd-7L-EKQ" eventType="touchUpInside" id="vtF-z8-3A1"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>

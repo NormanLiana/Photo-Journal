@@ -44,6 +44,11 @@ class PhotoJournalVC: UIViewController {
     }
     
     
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    
     // MARK: Private Methods
     private func loadEntry() {
         do {
