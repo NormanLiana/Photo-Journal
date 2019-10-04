@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="621.73913043478262" y="22.767857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="RaR-wR-AMn">
             <objects>
-                <viewController id="kJh-AP-f2N" sceneMemberID="viewController">
+                <viewController id="kJh-AP-f2N" customClass="SettingsVC" customModule="PhotoJournal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fm-fG-DiF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
