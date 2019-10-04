@@ -16,6 +16,8 @@
 		A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */; };
 		A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */; };
 		A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */; };
+		A52B6E082347C9F8007DB5BE /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B6E072347C9F8007DB5BE /* PersistenceManager.swift */; };
+		A52B6E0B2347CB21007DB5BE /* PhotoPersistHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B6E0A2347CB21007DB5BE /* PhotoPersistHelper.swift */; };
 		A53FF4D52347BA9000A4A717 /* PhotoEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FF4D42347BA9000A4A717 /* PhotoEntryVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		A5156ECE2346855B00F6F3D4 /* PhotoJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalVC.swift; sourceTree = "<group>"; };
 		A5156ED2234690D100F6F3D4 /* PhotoJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournal.swift; sourceTree = "<group>"; };
 		A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalCell.swift; sourceTree = "<group>"; };
+		A52B6E072347C9F8007DB5BE /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A52B6E0A2347CB21007DB5BE /* PhotoPersistHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPersistHelper.swift; sourceTree = "<group>"; };
 		A53FF4D42347BA9000A4A717 /* PhotoEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 		A5156EAB2346830D00F6F3D4 /* PhotoJournal-Project */ = {
 			isa = PBXGroup;
 			children = (
+				A52B6E092347CA04007DB5BE /* Helpers */,
 				A5156ED0234686B500F6F3D4 /* Controllers */,
 				A5156EB22346830D00F6F3D4 /* Main.storyboard */,
 				A5156ED72346924200F6F3D4 /* Views */,
@@ -138,6 +143,15 @@
 				A5156ED52346923A00F6F3D4 /* PhotoJournalCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A52B6E092347CA04007DB5BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A52B6E072347C9F8007DB5BE /* PersistenceManager.swift */,
+				A52B6E0A2347CB21007DB5BE /* PhotoPersistHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +258,11 @@
 				A5156ECF2346855B00F6F3D4 /* PhotoJournalVC.swift in Sources */,
 				A5156ED62346923A00F6F3D4 /* PhotoJournalCell.swift in Sources */,
 				A53FF4D52347BA9000A4A717 /* PhotoEntryVC.swift in Sources */,
+				A52B6E082347C9F8007DB5BE /* PersistenceManager.swift in Sources */,
 				A5156EAD2346830D00F6F3D4 /* AppDelegate.swift in Sources */,
 				A5156ED3234690D100F6F3D4 /* PhotoJournal.swift in Sources */,
 				A5156EAF2346830D00F6F3D4 /* SceneDelegate.swift in Sources */,
+				A52B6E0B2347CB21007DB5BE /* PhotoPersistHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
