@@ -31,6 +31,10 @@ class PhotoEntryVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 }
 
 // MARK: Extensions

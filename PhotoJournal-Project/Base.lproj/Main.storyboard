@@ -158,6 +158,9 @@
                                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="DMB-Kw-SWb" eventType="touchUpInside" id="b2o-st-sUo"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
