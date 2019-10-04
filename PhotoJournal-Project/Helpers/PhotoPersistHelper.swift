@@ -20,10 +20,6 @@ struct PhotoPersistHelper {
         return try persistenceHelper.getObjects()
     }
     
-//    func deletePhoto() {
-//        
-//    }
-    
     private let persistenceHelper = PersistenceManager<PhotoJournal>(fileName: "photos.plist")
     
     private init() {}

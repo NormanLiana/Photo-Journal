@@ -18,22 +18,41 @@ class PhotoJournalVC: UIViewController {
     
     
     // MARK: Properties
-    var photoAlbums = [PhotoJournal]()
+    var photoAlbums = [PhotoJournal]() {
+        didSet {
+            collectionViewOutlet.reloadData()
+        }
+    }
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadEntry()
+        collectionViewOutlet.dataSource = self
+        collectionViewOutlet.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadEntry()
     }
     
     // MARK: Actions
     @IBAction func addEntryButtonPressed(_ sender: UIBarButtonItem) {
         let entryVC = storyboard?.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
+        entryVC.modalPresentationStyle = .currentContext
         present(entryVC, animated: true, completion: nil)
     }
     
     
     // MARK: Private Methods
-    
+    private func loadEntry() {
+        do {
+            photoAlbums = try PhotoPersistHelper.manager.getPhoto()
+            
+        } catch {
+            print(error)
+        }
+    }
 
 }
 
@@ -46,10 +65,8 @@ extension PhotoJournalVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionViewOutlet.dequeueReusableCell(withReuseIdentifier: "journalCell", for: indexPath) as? PhotoJournalCell {
             let album = photoAlbums[indexPath.row]
-            cell.textViewOutlet.text = album.title
-            
-            // TODO: set image for cell
-            
+            cell.titleLabel.text = album.title
+            cell.imgOutlet.image = UIImage(data: album.photo)
             return cell
         }
         return UICollectionViewCell()
@@ -57,3 +74,10 @@ extension PhotoJournalVC: UICollectionViewDataSource {
 }
 
 
+extension PhotoJournalVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: 300)
+    }
+}
+
+extension PhotoJournalVC: UICollectionViewDelegate {}
