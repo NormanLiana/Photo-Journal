@@ -117,7 +117,7 @@
         <!--SettingsVC-->
         <scene sceneID="RaR-wR-AMn">
             <objects>
-                <viewController id="kJh-AP-f2N" customClass="SettingsVC" customModule="PhotoJournal_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsVC" id="kJh-AP-f2N" customClass="SettingsVC" customModule="PhotoJournal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fm-fG-DiF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +148,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Green Background"/>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RPR-2d-ab8">
+                                <rect key="frame" x="94" y="109" width="241" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Horizontal"/>
+                                    <segment title="Vertical"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9Xv-O2-6Tg"/>

@@ -39,13 +39,13 @@ class PhotoJournalVC: UIViewController {
     // MARK: Actions
     @IBAction func addEntryButtonPressed(_ sender: UIBarButtonItem) {
         let entryVC = storyboard?.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
-        entryVC.modalPresentationStyle = .currentContext
         present(entryVC, animated: true, completion: nil)
     }
     
     
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
-        
+        let settingsVC = storyboard?.instantiateViewController(identifier: "SettingsVC") as! SettingsVC
+        present(settingsVC, animated: true, completion: nil)
     }
     
     
