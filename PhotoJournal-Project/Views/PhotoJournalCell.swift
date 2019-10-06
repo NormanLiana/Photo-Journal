@@ -8,12 +8,26 @@
 
 import UIKit
 
+protocol PhotoJournalCellDelegate: AnyObject {
+    func actionSheet(tag: Int)
+}
+
 class PhotoJournalCell: UICollectionViewCell {
     
     // MARK: Outlets
     @IBOutlet weak var imgOutlet: UIImageView!
     
-   
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var optionsButton: UIButton!
+    
+    // MARK: Delegate
+    weak var delegate: PhotoJournalCellDelegate?
+    
+    // MARK: Actions
+    @IBAction func optionsButtonPressed(_ sender: UIButton) {
+        delegate?.actionSheet(tag: sender.tag)
+    }
+    
     
 }

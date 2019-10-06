@@ -45,8 +45,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-Ed-1bR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-Ed-1bR">
+                                <rect key="frame" x="0.0" y="54" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3EO-2c-kC3">
                                     <size key="itemSize" width="50" height="50"/>
@@ -54,13 +54,6 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqA-kM-vhQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="journalCell" id="Q6N-y6-Knt" customClass="PhotoJournalCell" customModule="PhotoJournal_Project" customModuleProvider="target">
                                         <rect key="frame" x="13.5" y="0.0" width="387" height="348"/>
@@ -78,12 +71,23 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <state key="normal" title=". . ."/>
+                                                    <connections>
+                                                        <action selector="optionsButtonPressed:" destination="Q6N-y6-Knt" eventType="touchUpInside" id="0Ya-b6-h7O"/>
+                                                    </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqA-kM-vhQ">
+                                                    <rect key="frame" x="54" y="243" width="280" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="387" height="348"/>
                                         <connections>
                                             <outlet property="imgOutlet" destination="krQ-74-icP" id="KAl-5u-jSQ"/>
+                                            <outlet property="optionsButton" destination="3rh-YX-1s3" id="CXH-jQ-Z0f"/>
                                             <outlet property="titleLabel" destination="kqA-kM-vhQ" id="Mdq-Kv-9EP"/>
                                         </connections>
                                     </collectionViewCell>

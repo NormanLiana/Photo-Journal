@@ -32,9 +32,6 @@ class PhotoJournalVC: UIViewController {
         collectionViewOutlet.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        loadEntry()
-    }
     
     // MARK: Actions
     @IBAction func addEntryButtonPressed(_ sender: UIBarButtonItem) {
@@ -72,6 +69,8 @@ extension PhotoJournalVC: UICollectionViewDataSource {
             let album = photoAlbums[indexPath.row]
             cell.titleLabel.text = album.title
             cell.imgOutlet.image = UIImage(data: album.photo)
+            cell.optionsButton.tag = indexPath.row
+            cell.delegate = self
             return cell
         }
         return UICollectionViewCell()
@@ -86,3 +85,19 @@ extension PhotoJournalVC: UICollectionViewDelegateFlowLayout {
 }
 
 extension PhotoJournalVC: UICollectionViewDelegate {}
+
+
+extension PhotoJournalVC: PhotoJournalCellDelegate {
+    func actionSheet(tag: Int) {
+        let optionsMenu = UIAlertController(title: "Options", message: "Pick an option below", preferredStyle: .actionSheet)
+        let deleteAlbum = UIAlertAction(title: "Delete", style: .default, handler: nil)
+        let editAlbum = UIAlertAction(title: "Edit", style: .default, handler: nil)
+        let shareAlbum  = UIAlertAction(title: "Share", style: .default, handler: nil)
+        optionsMenu.addAction(deleteAlbum)
+        optionsMenu.addAction(editAlbum)
+        optionsMenu.addAction(shareAlbum)
+        self.present(optionsMenu, animated: true, completion: nil)
+    }
+    
+    
+}
