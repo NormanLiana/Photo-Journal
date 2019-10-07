@@ -187,6 +187,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Xv-O2-6Tg"/>
                     </view>
+                    <connections>
+                        <outlet property="darkModeSwitch" destination="N5H-lO-eUG" id="yvF-wS-Nht"/>
+                        <outlet property="segController" destination="RPR-2d-ab8" id="Tc6-Jo-Aaq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghL-lx-cwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

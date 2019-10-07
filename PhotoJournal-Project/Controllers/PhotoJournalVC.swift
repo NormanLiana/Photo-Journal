@@ -109,7 +109,10 @@ extension PhotoJournalVC: PhotoJournalCellDelegate {
             photoEntryVC.modalPresentationStyle = .currentContext
             self.present(photoEntryVC, animated: true, completion: nil)
         }
-        let shareAlbum  = UIAlertAction(title: "Share", style: .default, handler: nil)
+        let shareAlbum  = UIAlertAction(title: "Share", style: .default) { (action) in
+            let sharingActivity = UIActivityViewController(activityItems: [self.photoAlbums[tag].photo, self.photoAlbums[tag].title], applicationActivities: nil)
+            self.present(sharingActivity, animated: true, completion: nil)
+        }
         optionsMenu.addAction(deleteAlbum)
         optionsMenu.addAction(editAlbum)
         optionsMenu.addAction(shareAlbum)

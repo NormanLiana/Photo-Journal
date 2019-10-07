@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingsDelegate {
+protocol SettingsDelegate: AnyObject {
     func darkModeOn()
     func darkModeOff()
     func horizontalScroll()
