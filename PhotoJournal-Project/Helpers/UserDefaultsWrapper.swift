@@ -21,15 +21,23 @@ class UserDefaultsWrapper {
     
     // MARK: Getters
     func getBackgroundColor() -> UIColor {
-        return UserDefaults.standard.value(forKey: backgroundColorKey) as! UIColor
+        guard let color = UserDefaults.standard.value(forKey: backgroundColorKey) as? UIColor else { return UIColor() }
+        return color
     }
     
     func getScrollOrientation() -> Bool {
-        return UserDefaults.standard.value(forKey: scrollOrientationKey) as! Bool
+        guard let scroll = UserDefaults.standard.value(forKey: scrollOrientationKey) as? Bool else { return false }
+        return scroll
     }
     
     // MARK: Setter
     
+    func setScrollOrientation() {
+        
+    }
     
+    func setBackgroundColor() {
+        
+    }
 
 }

@@ -27,6 +27,7 @@ class PhotoJournalCell: UICollectionViewCell {
     // MARK: Actions
     @IBAction func optionsButtonPressed(_ sender: UIButton) {
         delegate?.actionSheet(tag: sender.tag)
+        
     }
     
     

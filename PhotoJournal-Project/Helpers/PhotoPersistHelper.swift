@@ -20,6 +20,14 @@ struct PhotoPersistHelper {
         return try persistenceHelper.getObjects()
     }
     
+    func delete(tag: Int) throws {
+        try persistenceHelper.delete(index: tag)
+    }
+    
+    func edit(element: PhotoJournal, index: Int) throws {
+        try persistenceHelper.edit(newElement: element, index: index)
+    }
+    
     private let persistenceHelper = PersistenceManager<PhotoJournal>(fileName: "photos.plist")
     
     private init() {}

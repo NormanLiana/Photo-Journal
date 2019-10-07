@@ -13,10 +13,6 @@ class PhotoJournalVC: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
-    
-    
-    
-    
     // MARK: Properties
     var photoAlbums = [PhotoJournal]() {
         didSet {
@@ -30,6 +26,11 @@ class PhotoJournalVC: UIViewController {
         loadEntry()
         collectionViewOutlet.dataSource = self
         collectionViewOutlet.delegate = self
+    }
+    
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       loadEntry()
     }
     
     
@@ -90,14 +91,29 @@ extension PhotoJournalVC: UICollectionViewDelegate {}
 extension PhotoJournalVC: PhotoJournalCellDelegate {
     func actionSheet(tag: Int) {
         let optionsMenu = UIAlertController(title: "Options", message: "Pick an option below", preferredStyle: .actionSheet)
-        let deleteAlbum = UIAlertAction(title: "Delete", style: .default, handler: nil)
-        let editAlbum = UIAlertAction(title: "Edit", style: .default, handler: nil)
+        let deleteAlbum = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+            do {
+                try PhotoPersistHelper.manager.delete(tag: tag)
+                self.loadEntry()
+            } catch {
+                return
+            }
+            
+        }
+        let editAlbum = UIAlertAction(title: "Edit", style: .default) { (action) in
+            let pic = self.photoAlbums[tag]
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let photoEntryVC = storyboard.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
+            photoEntryVC.picture = pic
+            photoEntryVC.index = tag
+            photoEntryVC.modalPresentationStyle = .currentContext
+            self.present(photoEntryVC, animated: true, completion: nil)
+        }
         let shareAlbum  = UIAlertAction(title: "Share", style: .default, handler: nil)
         optionsMenu.addAction(deleteAlbum)
         optionsMenu.addAction(editAlbum)
         optionsMenu.addAction(shareAlbum)
         self.present(optionsMenu, animated: true, completion: nil)
     }
-    
     
 }

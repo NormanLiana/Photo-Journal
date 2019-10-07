@@ -16,11 +16,14 @@ class PhotoEntryVC: UIViewController {
     
     // MARK: Properties
     var journalTitle: String!
+    var picture: PhotoJournal?
+    var index: Int?
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldOutlet.delegate = self
+        editSetUp()
 
     }
     
@@ -39,10 +42,34 @@ class PhotoEntryVC: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let imgData = self.imgOutlet.image?.jpegData(compressionQuality: 0.7) else {return}
         let journalEntry = PhotoJournal(photo: imgData, title: journalTitle)
-        try? PhotoPersistHelper.manager.savePhoto(newPhoto: journalEntry)
-        self.dismiss(animated: true, completion: nil)
+        switch picture != nil {
+        case true:
+            DispatchQueue.global(qos: .utility).async {
+                try? PhotoPersistHelper.manager.edit(element: journalEntry, index: self.index!)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+
+            }
+        case false:
+            DispatchQueue.global(qos: .utility).async {
+                try? PhotoPersistHelper.manager.savePhoto(newPhoto: journalEntry)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            
+            
+        }
+        
     }
     
+    private func editSetUp() {
+        if picture != nil {
+            imgOutlet.image = UIImage(data: picture!.photo)
+            textFieldOutlet.text = picture?.title
+        }
+    }
 }
 
 // MARK: Extensions
