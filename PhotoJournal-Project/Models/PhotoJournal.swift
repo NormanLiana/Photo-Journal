@@ -11,4 +11,11 @@ import Foundation
 struct PhotoJournal: Codable {
     let photo: Data
     let title: String
+    
+    
+}
+
+enum AddorEdit {
+    case add
+    case edit
 }

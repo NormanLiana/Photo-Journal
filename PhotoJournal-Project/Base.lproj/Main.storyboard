@@ -159,6 +159,9 @@
                                     <segment title="Horizontal"/>
                                     <segment title="Vertical"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segControllerChanged:" destination="kJh-AP-f2N" eventType="valueChanged" id="EcI-fS-O3F"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode On/Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzu-49-qKV">
                                 <rect key="frame" x="86.5" y="352" width="241" height="36"/>
@@ -172,6 +175,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5H-lO-eUG">
                                 <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="darkModeSwitchPressed:" destination="kJh-AP-f2N" eventType="valueChanged" id="8Ju-QY-z38"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

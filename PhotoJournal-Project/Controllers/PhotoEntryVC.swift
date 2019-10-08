@@ -18,11 +18,11 @@ class PhotoEntryVC: UIViewController {
     var journalTitle: String!
     var picture: PhotoJournal?
     var index: Int?
+    var addOrEdit: AddorEdit!
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldOutlet.delegate = self
         editSetUp()
 
     }
@@ -41,25 +41,16 @@ class PhotoEntryVC: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let imgData = self.imgOutlet.image?.jpegData(compressionQuality: 0.7) else {return}
-        let journalEntry = PhotoJournal(photo: imgData, title: journalTitle)
-        switch picture != nil {
-        case true:
-            DispatchQueue.global(qos: .utility).async {
-                try? PhotoPersistHelper.manager.edit(element: journalEntry, index: self.index!)
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-
-            }
-        case false:
-            DispatchQueue.global(qos: .utility).async {
-                try? PhotoPersistHelper.manager.savePhoto(newPhoto: journalEntry)
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            
-            
+        let journalEntry = PhotoJournal(photo: imgData, title: textFieldOutlet.text!)
+        switch  addOrEdit {
+        case .edit:
+            try? PhotoPersistHelper.manager.edit(element: journalEntry, index: self.index!)
+            dismiss(animated: true, completion: nil)
+        case .add:
+            try? PhotoPersistHelper.manager.savePhoto(newPhoto: journalEntry)
+            dismiss(animated: true, completion: nil)
+        default:
+            return
         }
         
     }
@@ -82,11 +73,4 @@ extension PhotoEntryVC: UIImagePickerControllerDelegate, UINavigationControllerD
     }
 }
 
-extension PhotoEntryVC: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let title = textField.text {
-            journalTitle = title
-        }
-        return true
-    }
-}
+

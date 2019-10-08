@@ -20,6 +20,7 @@ class PhotoJournalVC: UIViewController {
         }
     }
     
+    
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,8 @@ class PhotoJournalVC: UIViewController {
     // MARK: Actions
     @IBAction func addEntryButtonPressed(_ sender: UIBarButtonItem) {
         let entryVC = storyboard?.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
+        entryVC.addOrEdit = .add
+        entryVC.modalPresentationStyle = .currentContext
         present(entryVC, animated: true, completion: nil)
     }
     
@@ -106,6 +109,7 @@ extension PhotoJournalVC: PhotoJournalCellDelegate {
             let photoEntryVC = storyboard.instantiateViewController(identifier: "PhotoEntryVC") as! PhotoEntryVC
             photoEntryVC.picture = pic
             photoEntryVC.index = tag
+            photoEntryVC.addOrEdit = .edit
             photoEntryVC.modalPresentationStyle = .currentContext
             self.present(photoEntryVC, animated: true, completion: nil)
         }
@@ -120,3 +124,4 @@ extension PhotoJournalVC: PhotoJournalCellDelegate {
     }
     
 }
+
